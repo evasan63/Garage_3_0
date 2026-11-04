@@ -1,0 +1,20 @@
+bil lkd073 Audi 1 blå 5
+bil hsu78b Cupra 2 vit 5
+bil lgh257 Golf 2 vit 5
+bil sju28b BMW 2 vit 2
+mc kau38b Honda 1 vit 
+båt trf48b Sand 2 vit 4
+buss skf678 Volvo 2 röd 50 8
+mc hab678 Kawa 1 grön 
+flygplan fgr356 Boing 1 vit 250
+buss sdf678 Volvo 2 röd 50 8
+mc frb678 Kawa 1 grön 
+bil lgh223 Golf 2 vit 5
+bil hju28b BMW 2 vit 2
+mc zau38b Honda 1 vit 
+båt tgw28b Volvo 2 vit 4
+buss skh938 Volvo 2 röd 50 8
+mc dwe978 Kawa 1 grön 
+flygplan jge987 Boing 1 vit 250
+buss ljo543 Volvo 2 vit 40 8
+mc dea278 Honda 1 grön 
