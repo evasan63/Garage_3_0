@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using static Garage_3_0.Services;
+using static Garage_3_0.Services.Utilities;
 
 namespace Garage_2_0.Tests
 {
@@ -24,7 +24,7 @@ namespace Garage_2_0.Tests
 
 
             // Act
-            bool valid = Services.Utilities.IsValidVehicleType(vehicleType);
+            bool valid = IsValidVehicleType(vehicleType);
 
             // Assert
             Assert.Equal(valid, expectedResult);
@@ -47,7 +47,7 @@ namespace Garage_2_0.Tests
 
 
             // Act
-            bool valid = Utilities.IsValidRegistrationNumber(regNumber);
+            bool valid = IsValidRegistrationNumber(regNumber);
 
             // Assert
             Assert.Equal(valid, expectedResult);
@@ -70,7 +70,7 @@ namespace Garage_2_0.Tests
 
 
             // Act
-            decimal parkingFee = Utilities.CalculateParkingFee(hoursParked, hourlyRate);
+            decimal parkingFee = CalculateParkingFee(hoursParked, hourlyRate);
 
             // Assert
             Assert.Equal(parkingFee, expectedValue);

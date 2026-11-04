@@ -439,6 +439,7 @@ namespace Garage_3_0.UI
                 PrintWarningMessage("Tyvärr finns inget garage tillgängligt nu!");
                 return;
             }
+
             // Ask for search criteria from the user   
             Console.WriteLine("*** Lista fordon i garaget efter fordons typ/ märke/ bränsle Typ/ färg/ antal säten/ antal hjul! ***");
             Console.WriteLine("1:Ange typ av fordon Car/Bus/Motorcycle/Boat/Airplane (enter to skip):");
@@ -475,7 +476,7 @@ namespace Garage_3_0.UI
 
             try
             {
-                Console.WriteLine("Lägg till fordon från fil, Ange antal fordon (0 - 20):");
+                Console.WriteLine("Lägga till fordon från fil, Ange antal fordon (0 - 20):");
                 if (int.TryParse(Console.ReadLine(), out int antal) && antal >= 0 && antal <= 20)
                 { 
                     garageHandler.AddVehicleFromFile(antal);

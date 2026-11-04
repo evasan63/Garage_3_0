@@ -298,7 +298,7 @@ namespace Garage_3_0.Services
                     default:
                         PrintErrorMessage("Invalid vehicle type. Please enter a valid vehicle type.");
                         return;
-                }
+                }  
             }
             catch (Exception ex)
             {

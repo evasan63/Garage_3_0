@@ -1,4 +1,5 @@
 ﻿using Garage_3_0.Models;
+using Garage_3_0.Services;
 
 namespace Garage_2_0.Tests
 {
@@ -16,8 +17,7 @@ namespace Garage_2_0.Tests
         [InlineData("FgW789", true)]
         public void Garage_GetVehicle_Tests(string regNumber, bool expectedResult)
         {
-            Garage garage = new Garage(30, 10, 25);
-            //List<Vehicle> vehicles = new List<Vehicle>()
+            Garage<Vehicle> garage = new Garage<Vehicle>(30, 10, 25);
 
             // Arrange
             garage.AddVehicle("bil", "FgW789", "Audi", "4", "blue", 5);
