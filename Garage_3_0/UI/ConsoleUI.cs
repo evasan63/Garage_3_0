@@ -26,53 +26,6 @@ namespace Garage_3_0.UI
             Console.WriteLine("***  Välkommen till Evas GarageApp 3.0  ***");
             Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
 
-
-            //Console.WriteLine("1. Skapa ett nytt garage");
-            //Console.WriteLine("2. Hämta ett befintligt garaget");
-            //Console.Write("Välj ett alternativ: ");
-
-            //switch (Console.ReadLine()?.Trim())
-            //{
-            //    case "1": // Create a new garage
-            //        if ((garageHandler = CreateGarage()) != null)
-            //        {
-            //            PrintSuccessfulMessage($"Nytt garage med ID {garageHandler.GarageId} skapat!");
-            //            PrintSuccessfulMessage($"Totalt antal parkeringsplatser: {garageHandler.TotalNumberOfParkingLots}" +
-            //                $" varav {garageHandler.NumberOfElectricParkingLots} laddplatser ");
-
-            //            AddVehiclesFromFile(garageHandler);
-            //        }
-            //        else
-            //        {
-            //            PrintWarningMessage("Tyvärr kunde inget garage skapas!");
-            //        }
-            //        break;
-
-            //    case "2": // Recreate an existing garage from file
-            //        Console.WriteLine("Ange garage-ID:");
-
-            //        if (int.TryParse(Console.ReadLine()?.Trim(), out int garageId))
-            //        {
-            //            garageHandler = RecreateGarage(garageId);
-            //            if (garageHandler != null)
-            //            {
-            //                //myGarages.Add(garageHandler);
-
-            //                PrintSuccessfulMessage($"*** Garage med ID {garageHandler.GarageId} återställt från fil! ***");
-            //                Console.WriteLine();
-            //            }
-            //        }
-            //        else
-            //        {
-            //            PrintWarningMessage("Ogiltigt garage-ID!");
-            //        }
-            //        break;
-
-            //    default:
-            //        PrintWarningMessage("Ogiltigt val, försök igen!");
-            //        break;
-            //}
-
             while (running)
             {
                 Console.WriteLine("1. Skapa ett nytt garage");
