@@ -9,6 +9,7 @@ Its possible to:
 - Add a vehicle to the Garage with specified Type, RegNum, Brand, FuelType, Color, NumSeats and NumWheels.
 - Get a vehicle from the Garage based on RegNumber.
 - List all vehicles in the Garage.
+- List the number of vehicles per type parked in the Garage.
 - List vehicles in the Garage of specified vehicles search criterias (Type, Brand, FuelType, Color, NumberOfSeats, NumberOfWheels).
 - Exit the program, the garage information is stored to a file named Garage-{GarageId}.txt.
 

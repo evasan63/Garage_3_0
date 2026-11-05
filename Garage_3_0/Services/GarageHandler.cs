@@ -13,6 +13,10 @@ namespace Garage_3_0.Services
         public int GarageId { get { return garage.GarageId; }}
         public int TotalNumberOfParkingLots { get { return garage.TotalNumberOfParkingLots; }}
         public int NumberOfElectricParkingLots { get { return garage.NumberOfElectricParkingLots; }}
+        public int CurrentVehicleCount { get { return garage.CurrentVehicleCount; }}
+        public int CurrentElectricVehicleCount { get { return garage.CurrentElectricVehicleCount; }}
+        public int CurrentOccupiedSpots { get { return garage.CurrentOccupiedSpots; }}
+        public int CurrentOccupiedElectricSpots { get { return garage.CurrentOccupiedElectricSpots; }}
 
         //****************************************************************************
         // Constructor for the Garage class
@@ -112,6 +116,14 @@ namespace Garage_3_0.Services
         public void ListAllVehicles()
         {
             garage.ListAllVehicles();
+        }
+
+        //**************************************************************
+        // Show number of vehicles per type parked in the garage
+        //**************************************************************
+        public void ShowVehiclesCount()
+        {
+            garage.ShowVehiclesCount();
         }
 
         //**************************************************************************

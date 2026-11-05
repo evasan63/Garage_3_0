@@ -11,6 +11,10 @@ namespace Garage_3_0.Services
         int GarageId { get; }
         int TotalNumberOfParkingLots { get; }
         int NumberOfElectricParkingLots { get; }
+        int CurrentVehicleCount { get; }
+        int CurrentElectricVehicleCount { get; }
+        int CurrentOccupiedSpots { get; }
+        int CurrentOccupiedElectricSpots { get; }   
 
         //*************************************************************************************
         // The method AddVehicle is used to park a vehicle of specified type in the garage.    
@@ -46,6 +50,11 @@ namespace Garage_3_0.Services
         // The method ListAllVehicles is used to list all vehicles parked in the garage.
         //***********************************************************************************
         void ListAllVehicles();
+
+        //**************************************************************
+        // Show number of vehicles per type parked in the garage
+        //**************************************************************
+        void ShowVehiclesCount();
 
         //***********************************************************************************
         // The method SearchVehicles is used to list vehicles with certain criterias such as 

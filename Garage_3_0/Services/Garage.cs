@@ -381,6 +381,26 @@ namespace Garage_3_0.Services
             }   
         }
 
+        //**************************************************************
+        // Show number of vehicles per type parked in the garage
+        //**************************************************************
+        public void ShowVehiclesCount()
+        {
+            try
+            {
+                Console.WriteLine($"\nTotalt Antal fordon i garaget: {CurrentVehicleCount}");
+                Console.WriteLine($"Antal bilar: {vehicles.Count(v => v is Car)}");
+                Console.WriteLine($"Antal motorcyklar: {vehicles.Count(v => v is Motorcycle)}");
+                Console.WriteLine($"Antal bussar: {vehicles.Count(v => v is Bus)}");
+                Console.WriteLine($"Antal båtar: {vehicles.Count(v => v is Boat)}");
+                Console.WriteLine($"Antal flygplan: {vehicles.Count(v => v is Airplane)}");
+            }
+            catch (Exception ex)
+            {
+                PrintErrorMessage($"Error showing vehicle count: {ex.Message}");
+            }
+        }
+
         //**********************************************************************
         // This method is used to list vehicles with certain type/brand/color etc
         // parked in the garage.

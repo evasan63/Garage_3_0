@@ -10,6 +10,19 @@ namespace Garage_3_0.Services
     public class Utilities
     {
         //***********************************************************************************
+        // This enum defines the different types of vehicles that can be added to the garage.
+        //***********************************************************************************
+        public enum VehicleType
+        {
+            NotUsed, 
+            Car,
+            Bus,
+            Motorcycle,
+            Boat,
+            Airplane
+        }
+
+        //***********************************************************************************
         // This enum defines the different types of fuel that a vehicle can use.
         //***********************************************************************************
         public enum FuelType

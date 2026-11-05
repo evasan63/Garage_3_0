@@ -1,9 +1,4 @@
 Garage-1
-44 33 5 0 5 0 2
+4 3 0 0 0 0 2
 
-Number of vehicles in the garage: 5
-Car LKD073 Audi Bensin blå 5 4
-Car HSU78B Cupra Diesel vit 5 4
-Car LGH257 Golf Diesel vit 5 4
-Car SJU28B BMW Diesel vit 2 4
-Motorcycle KAU38B Honda Bensin vit 1 2
+No vehicles in the garage!

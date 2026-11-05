@@ -57,9 +57,11 @@ namespace Garage_3_0.UI
                                 garageHandler = RecreateGarage(garageId);
                                 if (garageHandler != null)
                                 {
-                                    //myGarages.Add(garageHandler);
-                                    PrintSuccessfulMessage($"*** Garage med ID {garageHandler.GarageId} återställt från fil! ***");
-                                    Console.WriteLine();
+                                    PrintSuccessfulMessage($"***  Garage med ID {garageHandler.GarageId} återställt från fil!  ***" +
+                                        $"\nTotalt antal parkeringsplatser/lediga platser: " +
+                                        $"{ garageHandler.TotalNumberOfParkingLots}/{ garageHandler.TotalNumberOfParkingLots - garageHandler.CurrentOccupiedSpots}" +
+                                        "\nvarav antal laddplatser/lediga laddplatser: " +
+                                        $"{garageHandler.NumberOfElectricParkingLots}/{garageHandler.NumberOfElectricParkingLots - garageHandler.CurrentOccupiedElectricSpots} ");
                                 }
                             }
                             else
@@ -88,7 +90,8 @@ namespace Garage_3_0.UI
                     Console.WriteLine("2. Hämta ut ett fordon ur garaget");
                     Console.WriteLine("3. Lista alla fordon i garaget");
                     Console.WriteLine("4. Lista specifika fordon i garaget");
-                    Console.WriteLine("5. Parkera lista av fordon i garaget");
+                    Console.WriteLine("5. Visa antal fordon i garaget");
+                    Console.WriteLine("6. Parkera lista av fordon i garaget");
                     Console.WriteLine("0. Avsluta");
                     Console.Write("Välj ett alternativ: ");
 
@@ -110,7 +113,11 @@ namespace Garage_3_0.UI
                             SearchVehicles(garageHandler);
                             break;
 
-                        case "5": // Add list of vehicles into the garage (Fordon.txt)
+                        case "5": // Show vehicle count in the garage
+                            ShowVehiclesCount(garageHandler);
+                            break;
+
+                        case "6": // Add list of vehicles into the garage (Fordon.txt)
                             AddVehiclesFromFile(garageHandler);
                             break;
 
@@ -381,6 +388,27 @@ namespace Garage_3_0.UI
             }
         }
 
+        //**************************************************************
+        // Show number of vehicles per type parked in the garage
+        //**************************************************************
+        static public void ShowVehiclesCount(IHandler garageHandler)
+        {
+            try
+            {
+                if (garageHandler == null)
+                {
+                    PrintWarningMessage("Tyvärr finns inget garage tillgängligt nu!");
+                    return;
+                }
+
+                garageHandler.ShowVehiclesCount();
+            }
+            catch (Exception ex)
+            {
+                PrintErrorMessage($"Error getting vehicle: {ex.Message}");
+            }
+        }
+        
         //******************************************************************
         // List specific vehicles parked in the garage. The search criteria
         // is stored in the class SearchCriteria
@@ -436,7 +464,7 @@ namespace Garage_3_0.UI
                 }
                 else
                 {
-                    throw new Exception("Ogiltigt antal fordon");
+                    PrintWarningMessage("Ogiltigt antal, inga fordon tillagda");
 
                 }
             }
